@@ -43,51 +43,61 @@
       top: 0;
       right: 0;
       left: 0;
-      z-index: 20;
+      z-index: 30;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding: 20px 32px;
-      border-bottom: 1px solid rgba(99, 224, 229, 0.2);
-      background: rgba(17, 17, 17, 0.96);
+      gap: 28px;
+      width: 100%;
+      min-height: 86px;
+      padding: 12px 42px;
+      border-bottom: 1px solid rgba(99, 224, 229, 0.3);
+      background: #171717;
       backdrop-filter: blur(12px);
     }
 
-    .tvtt-logo {
+    .tvtt-site-logo {
       display: inline-flex;
+      flex: 0 0 auto;
       align-items: center;
       text-decoration: none;
     }
 
-    .tvtt-logo img {
+    .tvtt-site-logo img {
       display: block;
       width: 148px;
       height: auto;
     }
 
     .tvtt-site-nav,
-    .tvtt-footer-nav {
+    .tvtt-site-footer-nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px 24px;
+      align-items: center;
       justify-content: flex-end;
+      gap: 24px;
     }
 
     .tvtt-site-nav a,
-    .tvtt-footer-nav a {
+    .tvtt-site-footer-nav a {
       color: var(--tvtt-text);
       font-family: "Chicle", Arial, sans-serif;
       font-size: 1.35rem;
+      line-height: 1;
       text-decoration: none;
       text-transform: uppercase;
     }
 
     .tvtt-site-nav a:hover,
     .tvtt-site-nav a:focus-visible,
-    .tvtt-footer-nav a:hover,
-    .tvtt-footer-nav a:focus-visible {
+    .tvtt-site-footer-nav a:hover,
+    .tvtt-site-footer-nav a:focus-visible {
       color: var(--tvtt-cyan);
+    }
+
+    .tvtt-site-nav a:focus-visible {
+      outline: 2px solid var(--tvtt-cyan);
+      outline-offset: 6px;
     }
 
     .tvtt-hero {
@@ -255,16 +265,16 @@
       background: #0b0b0b;
     }
 
-    .tvtt-footer-nav {
+    .tvtt-site-footer-nav {
       justify-content: center;
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
-    .tvtt-footer-copy {
+    .tvtt-site-footer-copy {
       margin: 18px 0 0;
       color: var(--tvtt-muted);
-      font-size: 1.12rem;
+      font-size: 1.35rem;
       line-height: 1.1;
       text-align: center;
     }
@@ -277,16 +287,31 @@
 
     @media screen and (max-width: 780px) {
       :root {
-        --tvtt-header-offset: 228px;
+        --tvtt-header-offset: 126px;
       }
 
       .tvtt-site-header {
         flex-direction: column;
-        padding: 18px 16px;
+        gap: 14px;
+        min-height: 0;
+        padding: 12px 16px 16px;
+      }
+
+      .tvtt-site-logo img {
+        width: 122px;
       }
 
       .tvtt-site-nav {
         justify-content: center;
+        gap: 12px 18px;
+      }
+
+      .tvtt-site-nav a {
+        font-size: 1.15rem;
+      }
+
+      .tvtt-site-footer-nav a {
+        font-size: 1.1rem;
       }
 
       .tvtt-grid {
@@ -303,7 +328,7 @@
 <body>
   <main class="tvtt-page">
     <header class="tvtt-site-header">
-      <a class="tvtt-logo" href="../" aria-label="Treasure Valley Tech Tavern clips home">
+      <a class="tvtt-site-logo" href="../" aria-label="Treasure Valley Tech Tavern clips home">
         <img src="../tvtt-phone-logo.png" alt="Treasure Valley Tech Tavern">
       </a>
       <nav class="tvtt-site-nav" aria-label="Main navigation">
@@ -311,6 +336,7 @@
         <a href="https://help.treasurevalleytechtavern.com/for-bands/">For Bands</a>
         <a href="https://help.treasurevalleytechtavern.com/for-places/">For Bars &amp; Venues</a>
         <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
+        <a href="https://places.treasurevalleytechtavern.com">Places</a>
         <a href="https://treasurevalleytechtavern.com/about">About Us</a>
       </nav>
     </header>
@@ -344,13 +370,14 @@
     </div>
 
     <footer class="tvtt-site-footer">
-      <nav class="tvtt-footer-nav" aria-label="Footer">
+      <nav class="tvtt-site-footer-nav" aria-label="Footer">
         <a href="https://treasurevalleytechtavern.com">Home</a>
         <a href="https://help.treasurevalleytechtavern.com">How We Help</a>
         <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
+        <a href="https://places.treasurevalleytechtavern.com">Places</a>
         <a href="https://treasurevalleytechtavern.com/about">About Us</a>
       </nav>
-      <p class="tvtt-footer-copy">Copyright © 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>
+      <p class="tvtt-site-footer-copy">Copyright © 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>
     </footer>
   </main>
 
@@ -393,3 +420,4 @@
   </script>
 </body>
 </html>
+
