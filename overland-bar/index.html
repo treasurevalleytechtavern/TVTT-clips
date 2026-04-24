@@ -16,7 +16,7 @@
       --tvtt-text: #f4f6f7;
       --tvtt-muted: #aeb7bd;
       --tvtt-cyan: #63e0e5;
-      --tvtt-header-offset: 190px;
+      --tvtt-header-offset: 122px;
     }
 
     * {
@@ -183,7 +183,7 @@
     }
 
     .tvtt-hero {
-      padding: 0 20px 28px;
+      padding: 48px 20px 40px;
       text-align: center;
     }
 
@@ -198,7 +198,7 @@
       margin: 0 auto;
       max-width: 900px;
       color: var(--tvtt-muted);
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       line-height: 1.18;
     }
 
@@ -276,8 +276,8 @@
     .tvtt-thumb-title {
       display: -webkit-box;
       overflow: hidden;
-      font-family: Arial, sans-serif;
-      font-size: 0.96rem;
+      font-family: "Cute Font", Arial, sans-serif;
+      font-size: 1.3rem;
       font-weight: 800;
       line-height: 1.15;
       -webkit-box-orient: vertical;
@@ -285,8 +285,8 @@
     }
 
     .tvtt-thumb-channel {
-      font-family: Arial, sans-serif;
-      font-size: 0.82rem;
+      font-family: "Cute Font", Arial, sans-serif;
+      font-size: 1.1rem;
       font-weight: 700;
       line-height: 1.2;
     }
@@ -314,33 +314,31 @@
     }
 
     .tvtt-view-more {
-      display: inline-flex;
+     display: inline-flex;
       align-items: center;
-      gap: 10px;
       justify-content: center;
-      min-width: 252px;
-      padding: 13px 24px 15px;
-      border: 0;
+      width: min(100%, 360px);
+      min-height: 46px;
+      padding: 0 22px;
+      border: 1px solid #63e0e5;
       border-radius: 8px;
+      color: #000;
       background: #63e0e5;
-      color: #041316;
-      font-family: "Jersey 15", Arial, sans-serif;
-      font-size: 1.8rem;
-      line-height: 1;
-      cursor: pointer;
+      font-family: "Cute Font", Arial, sans-serif;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+
+
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.08) inset,
         0 0 12px rgba(99, 224, 229, 0.35),
         0 0 24px rgba(99, 224, 229, 0.16);
     }
 
-    .tvtt-view-more-arrow {
-      color: #041316;
-      font-size: 1.35rem;
-      line-height: 1;
-      transform: translateY(-1px);
-    }
-
+    
     .tvtt-site-footer {
       padding: 28px 16px 34px;
       border-top: 1px solid rgba(99, 224, 229, 0.22);
@@ -485,8 +483,7 @@
     <div class="tvtt-view-more-wrap">
       <button class="tvtt-view-more" type="button" data-view-more>
         <span>View More</span>
-        <span class="tvtt-view-more-arrow" aria-hidden="true">→</span>
-      </button>
+            </button>
     </div>
 
     <footer class="tvtt-site-footer">
@@ -596,4 +593,3 @@
   </script>
 </body>
 </html>
-
