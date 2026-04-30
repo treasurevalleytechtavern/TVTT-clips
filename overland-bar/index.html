@@ -16,7 +16,7 @@
       --tvtt-text: #f4f6f7;
       --tvtt-muted: #aeb7bd;
       --tvtt-cyan: #63e0e5;
-      --tvtt-header-offset: 122px;
+      --tvtt-header-height: 86px;
     }
 
     * {
@@ -26,13 +26,16 @@
     body {
       margin: 0;
       background: #000;
+      aspect-ratio: 9 / 16;
+      display: grid;
+      place-items: center;
       color: var(--tvtt-text);
       font-family: "Cute Font", Arial, sans-serif;
     }
 
     .tvtt-page {
       min-height: 100vh;
-      padding-top: var(--tvtt-header-offset);
+      padding-top: calc(var(--tvtt-header-height) + 20px);
       background:
         linear-gradient(180deg, rgba(99, 224, 229, 0.08), transparent 160px),
         #000;
@@ -57,6 +60,8 @@
       justify-content: space-between;
       gap: 28px;
       min-height: 61px;
+      width: min(100%, 1480px);
+      margin: 0 auto;
     }
 
     .tvtt-site-logo {
@@ -68,7 +73,7 @@
 
     .tvtt-site-logo img {
       display: block;
-      width: 148px;
+      width: 132px;
       height: auto;
     }
 
@@ -183,13 +188,13 @@
     }
 
     .tvtt-hero {
-      padding: 48px 20px 40px;
+      padding: 64px 20px 44px;
       text-align: center;
     }
 
     .tvtt-hero-logo {
       display: block;
-      width: min(100%, 340px);
+      width: min(100%, 420px);
       height: auto;
       margin: 0 auto 16px;
     }
@@ -225,6 +230,9 @@
       aspect-ratio: 9 / 16;
       border: 0;
       background: #000;
+      aspect-ratio: 9 / 16;
+      display: grid;
+      place-items: center;
     }
 
     .tvtt-thumb {
@@ -243,6 +251,9 @@
     .tvtt-thumb-media {
       position: relative;
       background: #000;
+      aspect-ratio: 9 / 16;
+      display: grid;
+      place-items: center;
       line-height: 0;
     }
 
@@ -260,7 +271,8 @@
     .tvtt-thumb img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      aspect-ratio: 9 / 16;
       object-fit: contain;
       object-position: center top;
       background: #000;
@@ -376,7 +388,7 @@
       }
 
       .tvtt-site-logo img {
-        width: 122px;
+        width: 110px;
       }
 
       .tvtt-site-nav-toggle {
@@ -420,13 +432,21 @@
     }
 
     @media screen and (max-width: 780px) {
-      :root {
-        --tvtt-header-offset: 126px;
+      .tvtt-page {
+        padding-top: calc(var(--tvtt-header-height) + 14px);
       }
 
       .tvtt-grid {
         grid-template-columns: 1fr;
         padding: 18px 16px 30px;
+      }
+
+      .tvtt-hero {
+        padding: 48px 16px 34px;
+      }
+
+      .tvtt-hero-logo {
+        width: min(100%, 340px);
       }
 
       .tvtt-subtitle {
@@ -447,7 +467,7 @@
           <span class="tvtt-site-nav-toggle-icon" aria-hidden="true"></span>
         </button>
         <nav class="tvtt-site-nav" id="site-navigation" aria-label="Main navigation">
-          <ul class="tvtt-site-nav-list">
+                              <ul class="tvtt-site-nav-list">
             <li><a href="https://treasurevalleytechtavern.com">Home</a></li>
             <li><a href="https://help.treasurevalleytechtavern.com/for-bands/">For Bands</a></li>
             <li><a href="https://help.treasurevalleytechtavern.com/for-places/">For Bars &amp; Venues</a></li>
@@ -465,19 +485,19 @@
     </section>
 
     <section class="tvtt-grid" aria-label="Overland Bar clips">
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625908691325242638" data-title="Just another karaoke night at Overland Bar in Boise."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEDWApwCUEWECHFV2ZIAqCASBBgf6gfzACsEaD~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=zTsxA%2BovD5ovWAD8eMS6Oqpne2c%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Just another karaoke night at Overland Bar in Boise." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Just another karaoke night at Overland Bar in Boise.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625384010683796749" data-title="turns out everyone knows the words"><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oozdS45QadkjLuklAAEAgDlwlVGOiPAEBA3iI~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=yRM0roH6N3VKqbJZ9aSwz1AB8AA%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="turns out everyone knows the words" loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">turns out everyone knows the words</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607572876845272333" data-title="Kurtis across the bar, running drinks, resetting the room... still singing."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oU4kvW7Igs0iCGOxlhSwZAadiABVTNAIBENAA~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=QMiFYNTA8e3%2BbIjxtEkU%2FHu7NdM%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Kurtis across the bar, running drinks, resetting the room... still singing." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Kurtis across the bar, running drinks, resetting the room... still singing.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625384816782871821" data-title="Megan on the mic while making your drink."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/ooCJePIgS1AF4EsnG4VEw0foA6DUDCAQRARpvl~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=eyWUCGpZCuyoYElH003r9bmieSY%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Megan on the mic while making your drink." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Megan on the mic while making your drink.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607530893292489998" data-title="The Only Exception turned the whole room into phone lights."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oYAArIA2TfTA3xbXWrECEFJErH7DBAekvEfCqw~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=hJ1Fxffi3o477hcTfgIJKlOPDlQ%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="The Only Exception turned the whole room into phone lights." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">The Only Exception turned the whole room into phone lights.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7616436367202979086" data-title="Karaoke nights at Overland Bar always turn into a group effort."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oEAuAPOvBBC0iASBeziBYmEH2BJITAAw5gKOIA~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=QfE5i0cSqwS0D5bQsOdpLRrvpIs%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Karaoke nights at Overland Bar always turn into a group effort." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Karaoke nights at Overland Bar always turn into a group effort.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625381570639088910" data-title="2am on the Boise Bench just hits different."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/owvLu4JaKAyP6U8BAOlLESwqkSLDHdgiAIAAi~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=105huDQ6VKJ%2FrorgcIoV0Qld3Zc%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="2am on the Boise Bench just hits different." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">2am on the Boise Bench just hits different.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7616436666709970189" data-title="Bartending and karaoke at the same time."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oc3gQIb7vCyAAAiBihXEqz8M4lAaBkEVMGq8A~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=TH2RTNW14xRbBZhNlk%2FDPVIUQwg%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Bartending and karaoke at the same time." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Bartending and karaoke at the same time.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7615435175136185613" data-title="That moment when the work day ends and someone says meet me at the bar."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/osIgA6av1AAi5DAlaR95aBtvdkiEOUA4FCU6m~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=qqpiUC%2BrWyFafq7Bky%2F8hEWfHAw%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="That moment when the work day ends and someone says meet me at the bar." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">That moment when the work day ends and someone says meet me at the bar.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625908691325242638" data-title="Just another karaoke night at Overland Bar in Boise."><div class="tvtt-thumb-media"><img src="./thumb-01.jpg" alt="Just another karaoke night at Overland Bar in Boise." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Just another karaoke night at Overland Bar in Boise.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625384010683796749" data-title="turns out everyone knows the words"><div class="tvtt-thumb-media"><img src="./thumb-02.jpg" alt="turns out everyone knows the words" loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">turns out everyone knows the words</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607572876845272333" data-title="Kurtis across the bar, running drinks, resetting the room... still singing."><div class="tvtt-thumb-media"><img src="./thumb-03.jpg" alt="Kurtis across the bar, running drinks, resetting the room... still singing." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Kurtis across the bar, running drinks, resetting the room... still singing.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625384816782871821" data-title="Megan on the mic while making your drink."><div class="tvtt-thumb-media"><img src="./thumb-04.jpg" alt="Megan on the mic while making your drink." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Megan on the mic while making your drink.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607530893292489998" data-title="The Only Exception turned the whole room into phone lights."><div class="tvtt-thumb-media"><img src="./thumb-05.jpg" alt="The Only Exception turned the whole room into phone lights." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">The Only Exception turned the whole room into phone lights.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7616436367202979086" data-title="Karaoke nights at Overland Bar always turn into a group effort."><div class="tvtt-thumb-media"><img src="./thumb-06.jpg" alt="Karaoke nights at Overland Bar always turn into a group effort." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Karaoke nights at Overland Bar always turn into a group effort.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7625381570639088910" data-title="2am on the Boise Bench just hits different."><div class="tvtt-thumb-media"><img src="./thumb-07.jpg" alt="2am on the Boise Bench just hits different." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">2am on the Boise Bench just hits different.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7616436666709970189" data-title="Bartending and karaoke at the same time."><div class="tvtt-thumb-media"><img src="./thumb-08.jpg" alt="Bartending and karaoke at the same time." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Bartending and karaoke at the same time.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card"><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7615435175136185613" data-title="That moment when the work day ends and someone says meet me at the bar."><div class="tvtt-thumb-media"><img src="./thumb-09.jpg" alt="That moment when the work day ends and someone says meet me at the bar." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">That moment when the work day ends and someone says meet me at the bar.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
 
-      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607573848149560590" data-title="Doug behind the bar all night and suddenly it is a full singalong."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oMPTSFAJfAEK2eCPADrTy5EfhEHkFEAdcwAI3z~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=vp8vw9dYM%2B3juaAOJ3QXHuH3rJY%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Doug behind the bar all night and suddenly it is a full singalong." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Doug behind the bar all night and suddenly it is a full singalong.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607571404476665101" data-title="Weekend at Overland equals packed room and full-send vibes."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oQ8AwBfiawyc0hQJVIBLK4AkAOEMiVBAB7CchT~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=ZchDNj4e2kQUSXh1o%2F9K2nnAybg%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Weekend at Overland equals packed room and full-send vibes." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Weekend at Overland equals packed room and full-send vibes.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
-      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607574669620677901" data-title="Ty behind the bar all night and then A Bar Song takes over the room."><div class="tvtt-thumb-media"><img src="https://p16-common-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/oYJBHAhAiCQAIHiw0XwA5icfBQ0KB6ByTEBK2n~tplv-tiktokx-origin.image?dr=9636&amp;x-expires=1777093200&amp;x-signature=dWVvm8Z%2B322Ws8iQqkeL4Dx%2FjCc%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=81f88b70&amp;shcp=43f4a2f9&amp;idc=useast8" alt="Ty behind the bar all night and then A Bar Song takes over the room." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Ty behind the bar all night and then A Bar Song takes over the room.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607573848149560590" data-title="Doug behind the bar all night and suddenly it is a full singalong."><div class="tvtt-thumb-media"><img src="./thumb-10.jpg" alt="Doug behind the bar all night and suddenly it is a full singalong." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Doug behind the bar all night and suddenly it is a full singalong.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607571404476665101" data-title="Weekend at Overland equals packed room and full-send vibes."><div class="tvtt-thumb-media"><img src="./thumb-11.jpg" alt="Weekend at Overland equals packed room and full-send vibes." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Weekend at Overland equals packed room and full-send vibes.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
+      <div class="tvtt-card tvtt-hidden" data-extra-clip><button class="tvtt-thumb" type="button" data-embed-src="https://www.tiktok.com/player/v1/7607574669620677901" data-title="Ty behind the bar all night and then A Bar Song takes over the room."><div class="tvtt-thumb-media"><img src="./thumb-12.jpg" alt="Ty behind the bar all night and then A Bar Song takes over the room." loading="lazy"><span class="tvtt-play-icon" aria-hidden="true"></span></div><span class="tvtt-thumb-copy"><span class="tvtt-thumb-title">Ty behind the bar all night and then A Bar Song takes over the room.</span><span class="tvtt-thumb-channel">Overland Bar • Boise</span></span></button></div>
     </section>
 
     <div class="tvtt-view-more-wrap">
@@ -487,14 +507,13 @@
     </div>
 
     <footer class="tvtt-site-footer">
-      <nav class="tvtt-site-footer-nav" aria-label="Footer">
+                  <nav class="tvtt-site-footer-nav" aria-label="Footer">
         <a href="https://treasurevalleytechtavern.com">Home</a>
-        <a href="https://help.treasurevalleytechtavern.com">How We Help</a>
         <a href="https://clips.treasurevalleytechtavern.com">Clips</a>
         <a href="https://places.treasurevalleytechtavern.com">Places</a>
         <a href="https://treasurevalleytechtavern.com/about">About Us</a>
       </nav>
-      <p class="tvtt-site-footer-copy">Copyright © 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>
+      <p class="tvtt-site-footer-copy">Copyright &copy; 2026 Treasure Valley Tech Tavern - Boise, Idaho - All Rights Reserved.</p>
     </footer>
   </main>
 
@@ -556,15 +575,30 @@
 
       const toggle = header.querySelector(".tvtt-site-nav-toggle");
       const mobileQuery = window.matchMedia("(max-width: 960px)");
+      const root = document.documentElement;
 
       if (!toggle) {
         return;
       }
 
+      function syncHeaderHeight() {
+        root.style.setProperty("--tvtt-header-height", header.getBoundingClientRect().height + "px");
+      }
+
       function closeMenu() {
         header.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        syncHeaderHeight();
       }
+
+      syncHeaderHeight();
+
+      if (typeof ResizeObserver !== "undefined") {
+        const observer = new ResizeObserver(syncHeaderHeight);
+        observer.observe(header);
+      }
+
+      window.addEventListener("resize", syncHeaderHeight);
 
       toggle.addEventListener("click", function () {
         const isOpen = toggle.getAttribute("aria-expanded") === "true";
@@ -576,6 +610,7 @@
 
         header.classList.add("is-open");
         toggle.setAttribute("aria-expanded", "true");
+        syncHeaderHeight();
       });
 
       document.addEventListener("keydown", function (event) {
@@ -587,7 +622,10 @@
       mobileQuery.addEventListener("change", function (event) {
         if (!event.matches) {
           closeMenu();
+          return;
         }
+
+        syncHeaderHeight();
       });
     }());
   </script>
